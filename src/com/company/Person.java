@@ -13,12 +13,11 @@ public abstract class Person {
         return this.familyName;
     }
 
-    public boolean equals(Person p) {
-        return p.firstName.equals(p.familyName);
+    public void setFamilyName(String familyName) {
+        this.familyName = familyName;
     }
 
-    public Person(String firstName, String familyName) {
-        this.firstName=firstName;
-        this.familyName=familyName;
+    public boolean equals(Person p) {
+        return this.firstName.equals(p.getFirstName()) && this.familyName.equals(p.getFamilyName());
     }
- }
+}

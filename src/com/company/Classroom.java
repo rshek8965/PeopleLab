@@ -50,9 +50,9 @@ public class Classroom {
      * Prints out the class to stdout.
      */
     public void printClass() {
-        System.out.printf("This class contains %s who teaches %s and whose students are %s",
+        System.out.printf("This class contains %s who teaches %s and whose students are %s.\n",
                 this.teacher.toString(),
                 this.teacher.getSubject(),
-                Arrays.stream(students).map(v -> v.toString()).collect(Collectors.joining(" ")));
+                Arrays.stream(students).map(v -> v.toString()).collect(Collectors.joining(", ")));
     }
 }

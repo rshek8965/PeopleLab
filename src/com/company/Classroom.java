@@ -11,6 +11,7 @@ public class Classroom {
      * The students in the classroom.
      */
     Student[] students;
+    Student[][] seatingChart = new Student[6][6];
 
     /**
      * The teacher of the classroom.
@@ -26,8 +27,16 @@ public class Classroom {
     public Classroom(Teacher teacher, Student[] students) {
         this.teacher = teacher;
         this.students = students;
+        fillSeats();
     }
 
+    public void fillSeats() {
+        for (int i =0; i<seatingChart.length;i++) {
+            for (int a=0; a<seatingChart[i].length;a++) {
+                seatingChart[i][a] = this.students;
+            }
+        }
+    }
     /**
      * The subject the classroom's teacher teaches.
      *

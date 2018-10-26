@@ -22,7 +22,6 @@ public class Classroom {
      * Creates a classroom with teacher and its students.
      *
      * @param teacher  the teacher of the class
-     * @param students the students of the class
      */
     public Classroom(Teacher teacher, Student[] students) {
         this.teacher = teacher;
@@ -31,12 +30,16 @@ public class Classroom {
     }
 
     public void fillSeats() {
-        for (int i =0; i<seatingChart.length;i++) {
-            for (int a=0; a<seatingChart[i].length;a++) {
-                seatingChart[i][a] = this.students;
-            }
+        int k = 0;
+            for (int i = 0; i < seatingChart.length; i++) {
+                for (int a = 0; a < seatingChart[i].length; a++) {
+                    seatingChart[i][a] = students[k];
+                    k++;
+                    System.out.println(seatingChart[i][a]);
+                }
         }
     }
+
     /**
      * The subject the classroom's teacher teaches.
      *
